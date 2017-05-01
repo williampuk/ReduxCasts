@@ -2,3 +2,8 @@
 bundle.js
 npm-debug.log
 yarn.lock
+.DS_Store
+# IntelliJ
+*.iml
+/.idea
+
