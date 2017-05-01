@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "(Blog) Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceRoot}/blog"
+        },
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "webRoot": "${workspaceRoot}"
+        }
+    ]
+}
