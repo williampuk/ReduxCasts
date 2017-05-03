@@ -19,7 +19,10 @@ export function fetchPosts() {
 
 export function createPost(values, callback) {
   const request = axios.post(`${ROOT_URL}/posts${API_KEY}`, values)
-    .then(() => callback());
+    .then(() => {
+      callback();
+      return;
+    });
 
   return {
     type: CREATE_POST,
@@ -38,10 +41,13 @@ export function fetchPost(id) {
 
 export function deletePost(id, callback) {
   const request = axios.delete(`${ROOT_URL}/posts/${id}${API_KEY}`)
-    .then(() => callback());
+    .then(() => {
+      callback()
+      return id;
+    });
 
   return {
     type: DELETE_POST,
-    payload: id
+    payload: request
   }
 }
